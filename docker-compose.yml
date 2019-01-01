@@ -1,0 +1,13 @@
+version: '3'
+services:
+  client:
+    build: .
+    depends_on:
+      - elasticsearch
+    command: /bin/bash
+    volumes:
+      - ./client:/client
+  elasticsearch:
+    image: elasticsearch:6.5.3
+    ports:
+      - "9200:9200"
