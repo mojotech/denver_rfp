@@ -1,5 +1,15 @@
 version: '3'
 services:
+  elasticsearch:
+    image: elasticsearch:6.5.3
+    ports:
+      - "9200:9200"
+  kibana:
+    image: kibana:6.5.3
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
   client:
     build: .
     depends_on:
@@ -7,11 +17,3 @@ services:
     command: /bin/bash
     volumes:
       - ./client:/client
-  elasticsearch:
-    image: elasticsearch:6.5.3
-    ports:
-      - "9200:9200"
-  kibana:
-    image: kibana:6.5.3
-    ports:
-      - "5601:5601"
