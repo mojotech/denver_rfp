@@ -3,3 +3,9 @@ source 'https://rubygems.org'
 ruby '2.5.3'
 
 gem "elasticsearch", "~> 6.1"
+
+gem "csv", "~> 3.0"
+
+gem "awesome_print", "~> 1.8"
+
+gem "activesupport", "~> 5.2"
