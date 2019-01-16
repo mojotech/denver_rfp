@@ -13,11 +13,11 @@ module StopMeta
       neighborhood: "Athmar Park",
     },
     D: {
-     name: "Federal - Mississippi",
+      name: "Federal - Mississippi",
       neighborhood: "Athmar Park",
     },
     E: {
-     name: "Federal - Alameda",
+      name: "Federal - Alameda",
       neighborhood: "Valverde",
     },
     F: {

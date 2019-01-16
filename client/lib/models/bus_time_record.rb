@@ -1,4 +1,4 @@
-require_relative '../../fixtures/stop_meta'
+require_relative "../../fixtures/stop_meta"
 
 class BusTimeRecord
   def initialize(params = {})

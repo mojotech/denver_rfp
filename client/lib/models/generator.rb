@@ -1,9 +1,8 @@
-require 'active_support/time'
-require_relative './bus_time_record'
-require_relative './bus_stop'
+require "active_support/time"
+require_relative "./bus_time_record"
+require_relative "./bus_stop"
 
 class Generator
-
   def self.generate
     self.new.generate
   end
@@ -14,7 +13,7 @@ class Generator
   end
 
   private def build_records(stops)
-    days = Date.today ... Date.today.advance(days: 30)
+    days = Date.today...Date.today.advance(days: 30)
 
     raw = days.map do |date|
       stops.map do |stop|
@@ -44,10 +43,10 @@ class Generator
   end
 
   private def read_bus_stops
-    data = CSV.read('fixtures/paddle.csv', headers: true, return_headers: false).by_col
+    data = CSV.read("fixtures/paddle.csv", headers: true, return_headers: false).by_col
     data.map do |datum|
       id, times = datum
-      BusStop.new({ id: id, lat: 0, long: 0, times: times })
+      BusStop.new({id: id, lat: 0, long: 0, times: times})
     end
   end
 end
