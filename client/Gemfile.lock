@@ -24,6 +24,7 @@ GEM
     minitest (5.11.3)
     multi_json (1.13.1)
     multipart-post (2.0.0)
+    rufo (0.4.1)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
@@ -36,6 +37,7 @@ DEPENDENCIES
   awesome_print (~> 1.8)
   csv (~> 3.0)
   elasticsearch (~> 6.1)
+  rufo (~> 0.4.1)
 
 RUBY VERSION
    ruby 2.5.3p105
