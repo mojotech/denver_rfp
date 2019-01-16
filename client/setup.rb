@@ -10,10 +10,17 @@ client = Elasticsearch::Client.new(host: "elasticsearch", log: false)
 client.transport.reload_connections!
 
 puts "Removing existing index..."
-client.indices.delete(Schema::TRANSPORTATION)
+begin
+  client.indices.delete(Schema::TRANSPORTATION)
+  client.indices.delete(Schema::DEMOGRAPHIC)
+  client.indices.delete(Schema::AIR_QUALITY)
+rescue
+end
 
 puts "Creating index......"
 client.indices.create(Schema::TRANSPORTATION)
+client.indices.create(Schema::DEMOGRAPHIC)
+client.indices.create(Schema::AIR_QUALITY)
 
 puts "Saving records..."
 records = Generator.generate
