@@ -29,10 +29,10 @@ class Generator
 
   private def generate_bus_time_record(stop, date, time)
     expected_arrival = DateTime.parse("#{date} #{time} -0700")
-    actual_arrival = expected_arrival.advance(seconds: rand(-300..300))
+    actual_arrival = expected_arrival.advance(seconds: rand(-900..900))
 
     expected_departure = DateTime.parse("#{date} #{time} -0700")
-    actual_departure = expected_departure.advance(seconds: rand(-300..300))
+    actual_departure = expected_departure.advance(seconds: rand(-900..900))
 
     BusTimeRecord.new({
       stop_id: stop.id,
