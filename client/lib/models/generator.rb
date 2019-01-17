@@ -13,7 +13,7 @@ class Generator
   end
 
   private def build_records(stops)
-    days = Date.today...Date.today.advance(days: 30)
+    days = Date.today.months_ago(1)...Date.today
 
     raw = days.map do |date|
       stops.map do |stop|
