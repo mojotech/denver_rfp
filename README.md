@@ -28,6 +28,17 @@
 
 6. Point your browser to [http://localhost:5601](http://localhost:5601)
 
+## Dashboard Setup
+
+1. Point your browser to [http://localhost:5601](http://localhost:5601).
+2. Under Kibana, selected [Saved Objects](http://localhost:5601/app/kibana#/management/kibana/objects).
+3. Click Import on the top right.
+4. Click Import under "Please select a JSON file to import" and select `kibana.json` in this repository.
+5. Click Import on the bottom right of the drawer.
+6. Visit [Dashboard](http://localhost:5601/app/kibana#/dashboards) and select *Arrival Delta Dashboard*.
+
+
+If you do not see any data, ensure that the time range at the very top right of the screen is set to "Last 1 year".
 
 ## Sample REST API Requests
 
